@@ -9,19 +9,6 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <!-- Kilit Ekranı -->
-  <div id="lock" class="lock-screen">
-    <div class="lock-container">
-      <div class="lock-visual"></div>
-      <h2 class="lock-title">Erişim Gerekli</h2>
-      <p class="lock-subtitle">Bu hedefi görüntülemek için şifre girin</p>
-      <input id="pin" type="password" inputmode="numeric" maxlength="4" autocomplete="off" placeholder="••••" class="lock-input">
-      <div class="lock-error" id="lerr"></div>
-      <button id="unlock" class="lock-button">Açın</button>
-      <p class="lock-hint">💡 İpucu: Doğum tarihiniz</p>
-    </div>
-  </div>
-
   <!-- Dekoratif Arka Plan -->
   <div class="background-decoration">
     <div class="blob blob-1"></div>
@@ -48,7 +35,6 @@
 
   <!-- Ana İçerik -->
   <main class="container">
-    <!-- Header -->
     <header class="header">
       <div class="header-content">
         <div class="logo">💰</div>
@@ -59,7 +45,6 @@
       </div>
     </header>
 
-    <!-- Target Display -->
     <section class="target-section">
       <div class="target-card">
         <div class="target-value">
@@ -71,7 +56,6 @@
       </div>
     </section>
 
-    <!-- Progress Section -->
     <section class="progress-section">
       <div class="progress-card">
         <div class="progress-header">
@@ -88,7 +72,6 @@
       </div>
     </section>
 
-    <!-- Stages -->
     <section class="stages-section">
       <div class="section-header">
         <h2>🚀 Büyüme Aşamaları</h2>
@@ -97,7 +80,6 @@
       <div id="stages" class="stages-grid"></div>
     </section>
 
-    <!-- Checklist -->
     <section class="checklist-section">
       <div class="section-header">
         <h2>✅ Başarı Stratejisi</h2>
@@ -106,7 +88,6 @@
       <div id="check" class="checklist-grid"></div>
     </section>
 
-    <!-- Actions -->
     <section class="actions-section">
       <button id="reset" class="reset-button">↻ Tümünü Sıfırla</button>
       <p class="actions-hint">Tüm ilerlemeyi temizlemek için butona iki kez tıklayın</p>

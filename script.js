@@ -139,63 +139,7 @@ function bindResetButton() {
   });
 }
 
-function bindLockScreen() {
-  const lock = document.getElementById('lock');
-  const pin = document.getElementById('pin');
-  const err = document.getElementById('lerr');
-  const unlockButton = document.getElementById('unlock');
-
-  const unlock = () => {
-    if (pin.value === '2712') {
-      try {
-        sessionStorage.setItem('unl', '1');
-      } catch (error) {
-        // no-op
-      }
-      lock.classList.add('off');
-      pin.value = '';
-      err.textContent = '';
-      return;
-    }
-
-    if (pin.value.length >= 4) {
-      err.textContent = 'Yanlış şifre';
-      pin.value = '';
-    }
-  };
-
-  try {
-    if (sessionStorage.getItem('unl') === '1') {
-      lock.classList.add('off');
-    }
-  } catch (error) {
-    // no-op
-  }
-
-  pin.addEventListener('input', () => {
-    err.textContent = '';
-    if (pin.value.length === 4) {
-      unlock();
-    }
-  });
-
-  pin.addEventListener('keydown', (event) => {
-    if (event.key === 'Enter') {
-      unlock();
-    }
-  });
-
-  unlockButton.addEventListener('click', () => {
-    if (pin.value.length < 4) {
-      err.textContent = '4 haneli şifreyi gir';
-      return;
-    }
-    unlock();
-  });
-}
-
 renderStages();
 renderChecklist();
 bindResetButton();
-bindLockScreen();
 updateProgress();
